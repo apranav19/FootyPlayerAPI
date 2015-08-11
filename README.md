@@ -7,7 +7,8 @@ This project utilizes the Django REST framework to create a simple API about foo
     Returns a list of players in the database
 
     For example,
-      {
+    ```json
+       {
         [
           {
             id: 1,
@@ -30,7 +31,8 @@ This project utilizes the Django REST framework to create a simple API about foo
             kit_number: 17
           }
         ]
-      }
+       }
+    ```
 
   * GET `/players/:id/`
     Returns a player based on the provided id
