@@ -34,3 +34,18 @@ This project utilizes the Django REST framework to create a simple API about foo
 
   * GET `/players/:id/`
     Returns a player based on the provided id
+
+    For example,
+    GET `/players/1`
+    ```json
+    {
+    "id":1,
+    "first_name":"Mesut",
+    "last_name":"Ozil",
+    "age":25,
+    "club":"Arsenal F.C.",
+    "country":"Germany",
+    "position":"CAM",
+    "kit_number":11
+    }
+    ```

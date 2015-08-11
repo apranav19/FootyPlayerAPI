@@ -21,3 +21,16 @@ def get_players(request):
         players = FootballPlayer.objects.all()
         serializer = FootballPlayerSerializer(players, many=True) # Serialize a list of players
         return JSONResponse(serializer.data)
+
+def get_player(request, id):
+    '''
+    Fetches a player with the provided id
+    '''
+    try:
+        player = FootballPlayer.objects.get(pk=id)
+    except:
+        return HttpResponse(status=404)
+
+    if request.method == 'GET':
+        serializer = FootballPlayerSerializer(player)
+        return JSONResponse(serializer.data)
